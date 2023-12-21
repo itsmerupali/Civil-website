@@ -1,0 +1,373 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Caveat', 'cursive';
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Hedvig Letters Serif', serif;
+}
+header {
+  
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  background-color: transparent;
+}
+.header-content {
+  text-align: center;
+  display: flex; 
+  align-items: center; 
+}
+
+.logo img {
+  margin-left:10px;
+  max-width: 200px; 
+  margin-right: 40px; 
+}
+.department-name h1 {
+  font-size: 32px; 
+  font-family: 'Caveat', 'cursive';
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Hedvig Letters Serif', serif;
+  color: #333; 
+}
+
+/* NAV BAR STYLES */
+
+nav {
+  position: fixed; 
+  width: 100%;
+  height:50px;
+  text-align: center;
+  /* background-color: #333;  */
+  background-color: transparent;
+  z-index: 1000; 
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center; 
+  padding: 10px 0; 
+}
+
+nav ul li {
+  margin: 0 15px; 
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black; 
+  font-size: 20px;
+  font-family: 'Caveat', 'cursive';
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Hedvig Letters Serif', serif; 
+ 
+}
+
+.btn{
+  cursor:pointer;
+    position:relative;
+    padding:5px 10px;
+    background:transparent;
+    font-size:20px;
+    font-family: 'Caveat', 'cursive';
+    font-family: 'Dosis', sans-serif;
+    font-family: 'Hedvig Letters Serif', serif;
+    /* border-top-right-radius:10px;
+    border-bottom-left-radius:5px; */
+    transition:all 1s;
+    &:after,&:before{
+      content:" ";
+      width:3px;
+      height:3px;
+      position:absolute;
+      border :0px solid #fff;
+      transition:all 1s;
+      }
+    &:after{
+      top:-1px;
+      left:-1px;
+      border-top:1px solid #333;
+      border-left:1px solid #333;
+    }
+    &:before{
+      bottom:-1px;
+      right:-1px;
+      border-bottom:1px solid #333;
+      border-right:1px solid #333;
+    }
+    &:hover{
+      border-top-right-radius:0px;
+    border-bottom-left-radius:0px;
+       background:white;
+       color:#333; 
+       &:before,&:after{
+        width:100%;
+        height:100%;
+         border-color:#333;
+      } 
+     } 
+    }
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  animation: slide-down 0.5s;
+  background-color: #333;
+}
+
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-50px); 
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 80px; 
+  background-color: transparent; 
+  z-index: 2; 
+}
+
+/* carousel */
+
+.carousel {
+  
+  width:100%;
+  border-top:2px solid #333;
+  height:500px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.carousel > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+}
+
+.slide > img {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: block;
+  width: 100%;
+  height:500px;
+  object-fit:fill;
+  object-position: center;
+}
+
+.slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0ms;
+}
+
+.carousel-button {
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size:20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, .5);
+  cursor: pointer;
+  border-radius: .25rem;
+  padding: 0 .5rem;
+  background-color: rgba(0, 0, 0, .1);
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+  color: white;
+  background-color: rgba(0, 0, 0, .2);
+}
+
+.carousel-button:focus {
+  outline: 1px solid black;
+}
+
+.carousel-button.prev {
+  left: 1rem;
+}
+
+.carousel-button.next {
+  right: 1rem;
+}
+
+#about {
+  line-height: 1.6;
+
+  background-color: transparent;
+  padding: 20px;
+  padding-top: 0%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px auto; 
+  width: 90%; }
+#about .abut-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+background-color: #333; }
+.about-content ul,
+.about-content ol {
+  margin-left: 20px;
+}
+
+.about-content li {
+  margin-bottom: 5px;
+}
+.about-content p {
+  text-align: justify;
+  text-justify: inter-word;
+  margin-bottom: 15px;
+}
+
+/* footer */
+
+footer {
+  background-image: url('https://media2.giphy.com/media/Zd6OHKmwBvCwHkTLz0/source.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  padding: 20px 0;
+  text-align: center;
+  color: white;
+  background-color: #333;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.college-logo {
+  max-width: 100px; 
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.contact-icons a {
+  display: flex;
+  align-items: center;
+  margin: 0 10px; 
+}
+
+.contact-icons img {
+  width: 50px; 
+  height: 40px; 
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+  header {
+    height: 60px; 
+  }
+
+  .logo img {
+    max-width: 150px;
+    margin-right: 20px; 
+  }
+
+  .department-name h1 {
+    font-size: 24px; 
+  }
+  nav ul {
+    display: flex;
+    justify-content: center; 
+    padding: 0;
+    list-style: none; 
+  }
+
+  nav ul li {
+    margin: 0 10px; 
+    text-align: center; 
+  }
+ 
+  .btn {
+    font-size: 14px;
+    padding: 8px 16px; 
+    border: none; 
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    background-color: transparent; 
+    color: inherit; 
+  }
+
+ 
+  .btn:hover {
+    background-color: #fff; 
+    color: inherit; 
+    border: none; 
+  }
+  .carousel {
+    height: 300px; 
+  }
+
+  .carousel > ul {
+    height: 300px; 
+  }
+
+  .slide > img {
+    height: 300px; 
+  }
+
+  #about {
+    padding-top: 10px; 
+  }
+
+  #about,
+  #about .abut-title {
+    width: 100%; 
+  }
+}
+
+/* Footer styles */
+@media only screen and (max-width: 767px) {
+  footer {
+    background-image: none;
+    padding: 10px 0; 
+  }
+
+  .college-logo {
+    max-width: 80px; 
+  }
+
+  .contact-icons img {
+    width: 30px;
+    height: 30px; 
+  }
+
+}
+
+
+
