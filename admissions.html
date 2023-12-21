@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admission Page</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Dosis:wght@200&family=Hedvig+Letters+Serif:opsz@12..24&display=swap');
+    </style>
+    <link rel="stylesheet" href="css/admissions.css">
+</head>
+
+<body>
+    <div class="navbar-container">
+        <nav id="navbar">
+            <ul>
+                <li><a href="index.html" class="btn" id="homebtn">Home</a></li>
+                <li><a href="laboratories.html" class="btn">Laboratories</a></li>
+                <li><a href="faculty.html" class="btn">Faculty</a></li>
+            </ul>
+        </nav>
+        <!-- <div class="logo">
+            <img src="images/AITR(LOGO).png" alt="College Logo">
+        </div> -->
+    </div>
+
+    <div class="options">
+        <div class="option" onclick="showDetails(1)">
+            <h2>B.Tech Courses</h2>
+        </div>
+        <div class="option" onclick="showDetails(2)">
+            <h2>B. Tech (Lateral Entry) Programmes</h2>
+        </div>
+        <div class="option" onclick="showDetails(3)">
+            <h2>M. Tech Programmes</h2>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="card-container">
+            <div class="card" id="card1">
+                <p>Candidates interested in seeking admission in 4-year full time B.Tech course should have passed 12th
+                    or equivalent from any recognized board or university with Mathematics as compulsory subject and
+                    minimum aggregate 45% marks in PCM collectively. Candidates having JEE score cards will get the
+                    preference. Admission to the B.Tech. course is as per the guidelines laid down by the Government:
+                    Reservation in the seats of Counselling as per the Govt. Norms: (90% of each branch).
+
+                    General Category – 50%, SC Category – 16%, OBC Category – 14%, ST Category – 20%, EWS Category- 10%.
+                <h3>Eligibility Criteria</h3>
+                <p>10+2 or equivalent exam with Maths</p>
+                </p>
+            </div>
+            <div class="card" id="card2">
+                <p>Candidates interested in seeking admission in 3-year full time Lateral Entry B.Tech. course should
+                    have passed Diploma in Engineering or equivalent from any recognized board or university in related
+                    branch.General Category – 50%, SC Category – 16%, OBC Category – 14%, ST Category – 20%, EWS
+                    Category- 10%.</p>
+                    <H3>
+                        Eligibility Criteria</H3>
+                        <P>Engg. Diploma in Any
+                            branch</P>
+            </div>
+            <div class="card" id="card3">
+                <p>Applicant interested for admission in 2 years full time M. Tech., shall have passed B.E./B. Tech. or equivalent examination approved by the AICTE in appropriate branch with at least 55% marks in the aggregate. Candidates belonging to Reserve categories will get relaxation as per the norms of State Government of Madhya Pradesh. Applicants possessing valid GATE score shall be given preference and also eligible for Govt. GATE scholarships.</p>
+            <H3>Eligibility Criteria</H3>
+            <P>B.E. /B. Tech. or equivalent examination approved by the AICTE
+
+            </P>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <h3>Admission Helpline</h3>
+            <p>Phone: 9630090037,<br>
+                      9630090038</p>
+            <p>Email: info@acropolis.in,<br>
+                admission@acropolis.in</p>
+            <h3>University </h3>
+            <p>Rajiv Gandhi Proudyogiki Vishwavidyalaya Airport Bypass Road, Bhopal, Madhya Pradesh</p>
+            <p>Website:www.rgpv.ac.in</p>
+        </div>
+        <!-- <div class="footer-gif"><img src="https://i.gifer.com/I0mK.gif" alt="Animated GIF"> -->
+            <div class="footer-gif"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCZTums7_oI8hzlxnpnZbkSAe1WmoqIl5tAyXbdAdfbGGcFcQCyOaP6MzekbX3GyGSooo&usqp=CAU"></div>
+        </div>
+        <!-- <div class="footer-video">
+            <video width="100%" controls>
+              <source src="https://cdnl.iconscout.com/lottie/premium/preview-watermark/engineer-doing-site-planning-4591915-3816955.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div> -->
+
+    </footer>
+
+    <script>
+        function showDetails(cardNumber) {
+            // Hide all cards
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => card.style.display = 'none');
+
+            // Show the selected card
+            const selectedCard = document.getElementById(`card${cardNumber}`);
+            selectedCard.style.display = 'block';
+        }
+
+    </script>
+</body>
+
+</html>

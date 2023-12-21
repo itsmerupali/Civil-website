@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laboratories-civil</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext");
+    @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Dosis:wght@200&family=Hedvig+Letters+Serif:opsz@12..24&family=Kalnia&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Dosis:wght@200&family=Hedvig+Letters+Serif:opsz@12..24&family=Kalnia&family=Roboto+Condensed&display=swap');
+  </style>
+
+  <link rel="stylesheet" href="css/laboratories.css">
+
+</head>
+
+<body>
+  <div class="navbar-container">
+    <nav id="navbar">
+      <ul>
+        <li><a href="index.html" class="btn" id="homebtn">Home</a></li>
+        <li><a href="admissions.html" class="btn">Admissions</a></li>
+        <li><a href="faculty.html" class="btn">Faculty</a></li>
+      </ul>
+    </nav>
+    <div class="logo">
+      <img src="images/AITR(LOGO).png" alt="College Logo">
+    </div>
+  </div>
+
+  <div class="container">
+    <h1 class="page-heading">Our Laboratories</h1>
+    <div class="card">
+      <h2>Geotechnical Engineering Laboratory</h2>
+      <P>It consists of equipment’s like Box shear test, Triaxial test, Plate load test, CBR test, Consolidation test,
+        Relative density, Sieve shaker, Unconfined compressive strength test, Automatic compactor, Standard proctor and
+        modified, proctor test, Permeability test, Swelling pressure test, etc. for determination of index properties
+        are the real strength of Geo-tech lab..</P>
+      <div class="slideshow-container" id="slideshow1">
+
+      
+        <div class="mySlides">
+          <img src="images/GEOTECH1.jpg" style="width:100%">
+        </div>
+        <div class="mySlides">
+          <img src="images/GEOTECH2.jpg" style="width:100%">
+        </div>
+        <div class="mySlides">
+          <img src="images/GEOTECH3.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <img src="images/Geotechnical.jpg" style="width:100%">
+        </div>
+
+
+        <a class="prev" onclick="plusSlides('slideshow1', -1)">&#10094;</a>
+        <a class="next" onclick="plusSlides('slideshow1', 1)">&#10095;</a>
+      </div>
+      <br>
+
+      <a href="QRScanner.html" class="learn-more-btn">Scan QR</a>
+    </div>
+
+    <!-- MATERAIL TESTING -->
+    <div class="card">
+      <h2>Material Testing Laboratory</h2>
+      <P>The research and consultancy work is actively carried out in this laboratory such as testing of various types
+        of cement Properties, properties of aggregates, mix design of concrete for various grades etc. The laboratory
+        has the major Equipments like Universal Testing Machine (400kN and 1000 kN), Compression Testing Machine with
+        Flexural strength attachment (3000 kN), Impact Testing Machine, and Permeability Apparatus and Vibration Table
+        etc.</P>
+      <div class="slideshow-container" id="slideshow2">
+        <div class="mySlides">
+          <img src="images/Material.jpg" style="width:100%">
+        </div>
+        <div class="mySlides">
+          <img src="images/MATERIAL2.jpg" style="width:100%">
+        </div>
+        <div class="mySlides">
+          <img src="images/MATERIAL3.jpg" style="width:100%">
+        </div>
+        <a class="prev" onclick="plusSlides('slideshow2', -1)">&#10094;</a>
+        <a class="next" onclick="plusSlides('slideshow2', 1)">&#10095;</a>
+      </div>
+      <br>
+      <a href="QRScanner.html" class="learn-more-btn">Scan QR</a>
+    </div>
+
+    <!-- Fluid Mechanics Laboratory -->
+    <div class="card">
+      <h2>Fluid Mechanics Laboratory</h2>
+      <P>The research and consultancy work is actively carried out in this laboratory such as testing of various types
+        of cement Properties, properties of aggregates, mix design of concrete for various grades etc. The laboratory
+        has the major Equipments like Universal Testing Machine (400kN and 1000 kN), Compression Testing Machine with
+        Flexural strength attachment (3000 kN), Impact Testing Machine, and Permeability Apparatus and Vibration Table
+        etc.</P>
+      <div class="slideshow-container" id="slideshow3">
+
+        <div class="mySlides">
+          <img src="images/FLUID2.jpg" style="width:100%">
+        </div>
+        <div class="mySlides">
+          <img src="images/FLUID1.jpg" style="width:100%">
+        </div>
+       <div class="mySlides">
+          <img src="images/FLUID3.jpg" style="width:100%">
+        </div>
+        <a class="prev" onclick="plusSlides('slideshow3', -1)">&#10094;</a>
+        <a class="next" onclick="plusSlides('slideshow3', 1)">&#10095;</a>
+      </div>
+      <br>
+      <a href="QRScanner.html" class="learn-more-btn">Scan QR</a>
+    </div>
+  </div>
+</body>
+
+
+<script>
+
+  let slideIndex = {};
+
+  function showSlides(slideshowId, n) {
+    if (!slideIndex[slideshowId]) {
+      slideIndex[slideshowId] = 1;
+    }
+    const slides = document.querySelectorAll(`#${slideshowId} .mySlides`);
+
+    if (slides.length > 0) {
+      if (n > slides.length) { slideIndex[slideshowId] = 1; }
+      if (n < 1) { slideIndex[slideshowId] = slides.length; }
+
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
+      }
+
+      slides[slideIndex[slideshowId] - 1].style.display = 'block';
+    }
+  }
+
+  function plusSlides(slideshowId, n) {
+    showSlides(slideshowId, slideIndex[slideshowId] += n);
+  }
+  showSlides('slideshow1', 1);
+  showSlides('slideshow2', 1);
+  showSlides('slideshow3', 1);
+
+
+</script>
+
+</html>

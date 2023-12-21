@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code Scanner</title>
+  <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Dosis:wght@200&family=Hedvig+Letters+Serif:opsz@12..24&family=Kalnia&family=Roboto+Condensed&display=swap');
+
+  </style>
+  <link rel="stylesheet" href="css/QrScanner.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.4/html5-qrcode.min.js" integrity="sha512-k/KAe4Yff9EUdYI5/IAHlwUswqeipP+Cp5qnrsUjTPCgl51La2/JhyyjNciztD7mWNKLSXci48m7cctATKfLlQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="logo">
+      <img src="images/AITR(LOGO).png" alt="College Logo">
+    </div>
+    <ul>
+      <li><a href="index.html" class="btn" id="homebtn">Home</a></li>
+      <li><a href="admissions.html" class="btn">Admissions</a></li>
+      <li><a href="faculty.html" class="btn">Faculty</a></li>
+      <li><a href="laboratories.html" class="btn">Laboratories</a></li>
+    </ul>
+  </nav>
+  <div><h2>Scan the QR code provided on the machines</h2></div>
+<main>
+    <div id="reader"></div>
+    <div id="result"></div>
+</main>
+    
+
+<script>
+  const scanner = new Html5QrcodeScanner('reader', { 
+      qrbox: {
+          width: 250,
+          height: 250,
+      },
+      fps: 20,
+  });
+
+  scanner.render((result) => {
+      window.location.href = result;
+      scanner.clear();
+  }, (error) => {
+      console.error(error);
+  });
+</script>
+  
+</body>
+</html>
